@@ -26,6 +26,7 @@ void GTextInput::handleInit()
     _displayObject = _input;
 
     this->addEventListener(UIEventType::TouchEnd, [this](EventContext*) {
+        _input->setPlaceHolder("");
         _input->openKeyboard();
     });
 }
@@ -47,12 +48,13 @@ void GTextInput::applyTextFormat()
 
 void GTextInput::setPrompt(const std::string & value)
 {
-    if (value.empty())
+    if (value.empty()){
         _input->setPlaceHolder(value.c_str());
     else
     {
         UBBParser* parser = UBBParser::getInstance();
         _input->setPlaceHolder(parser->parse(value.c_str(), true).c_str());
+        _placeHolderText = value;
         if (!parser->lastColor.empty())
             _input->setPlaceholderFontColor(ToolSet::hexToColor(parser->lastColor.c_str()));
         if (!parser->lastFontSize.empty())
@@ -117,6 +119,9 @@ void GTextInput::setTextFieldText()
 
 void GTextInput::editBoxReturn(cocos2d::ui::EditBox * editBox)
 {
+    if(_text.empty()){
+        _input->setPlaceHolder(_placeHolderText.c_str());
+    }
     //found that this will trigger even when focus is lost
     //if (isSingleLine())
     // dispatchEvent(UIEventType::Submit);
@@ -126,6 +131,7 @@ void GTextInput::editBoxTextChanged(cocos2d::ui::EditBox* editBox, const std::st
 {
     _text.clear();
     _text.append(_input->getText());
+    dispatchEvent(UIEventType::Changed);
 }
 
 NS_FGUI_END

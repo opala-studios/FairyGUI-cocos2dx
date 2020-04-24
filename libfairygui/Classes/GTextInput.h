@@ -40,6 +40,7 @@ protected:
 
 private:
     FUIInput* _input;
+    std::string _placeHolderText;
 };
 
 NS_FGUI_END
