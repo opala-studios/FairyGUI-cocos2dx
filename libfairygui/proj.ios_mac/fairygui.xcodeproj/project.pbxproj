@@ -914,13 +914,13 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../Examples/cocos2d",
-					"$(SRCROOT)/../../Examples/cocos2d/cocos",
-					"$(SRCROOT)/../../Examples/cocos2d/cocos/audio/include",
-					"$(SRCROOT)/../../Examples/cocos2d/external",
-					"$(SRCROOT)/../../Examples/cocos2d/extensions",
-					"$(SRCROOT)/../../Examples/cocos2d/external/chipmunk/include/chipmunk",
-					"$(SRCROOT)/../../Examples/cocos2d/external/glfw3/include/mac",
+					"$(SRCROOT)/../../../cocos2d",
+					"$(SRCROOT)/../../../cocos2d/cocos",
+					"$(SRCROOT)/../../../cocos2d/cocos/audio/include",
+					"$(SRCROOT)/../../../cocos2d/external",
+					"$(SRCROOT)/../../../cocos2d/extensions",
+					"$(SRCROOT)/../../../cocos2d/external/chipmunk/include/chipmunk",
+					"$(SRCROOT)/../../../cocos2d/external/glfw3/include/mac",
 					"$(SRCROOT)/../Classes",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -972,13 +972,13 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../Examples/cocos2d",
-					"$(SRCROOT)/../../Examples/cocos2d/cocos",
-					"$(SRCROOT)/../../Examples/cocos2d/cocos/audio/include",
-					"$(SRCROOT)/../../Examples/cocos2d/external",
-					"$(SRCROOT)/../../Examples/cocos2d/extensions",
-					"$(SRCROOT)/../../Examples/cocos2d/external/chipmunk/include/chipmunk",
-					"$(SRCROOT)/../../Examples/cocos2d/external/glfw3/include/mac",
+					"$(SRCROOT)/../../../cocos2d",
+					"$(SRCROOT)/../../../cocos2d/cocos",
+					"$(SRCROOT)/../../../cocos2d/cocos/audio/include",
+					"$(SRCROOT)/../../../cocos2d/external",
+					"$(SRCROOT)/../../../cocos2d/extensions",
+					"$(SRCROOT)/../../../cocos2d/external/chipmunk/include/chipmunk",
+					"$(SRCROOT)/../../../cocos2d/external/glfw3/include/mac",
 					"$(SRCROOT)/../Classes",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
