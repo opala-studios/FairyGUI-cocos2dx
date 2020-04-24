@@ -50,6 +50,7 @@ void GTextInput::setPrompt(const std::string & value)
 {
     if (value.empty()){
         _input->setPlaceHolder(value.c_str());
+    }
     else
     {
         UBBParser* parser = UBBParser::getInstance();
