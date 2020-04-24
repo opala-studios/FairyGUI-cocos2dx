@@ -30,6 +30,9 @@ void FUILabel::setText(const std::string& value)
     if (_fontSize < 0)
         applyTextFormat();
 
+    if (_fontConfig.fontSize != _fontSize)
+        restoreFontSize();
+
     setString(value);
 }
 
