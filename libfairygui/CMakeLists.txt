@@ -17,6 +17,7 @@ set(FAIRYGUI_SRC   Classes/GSlider.cpp
   Classes/tween/EaseManager.cpp
   Classes/tween/TweenPropType.cpp
   Classes/tween/GTween.cpp
+  Classes/tween/GPath.cpp
   Classes/GGroup.cpp
   Classes/Margin.cpp
   Classes/Transition.cpp
@@ -24,8 +25,8 @@ set(FAIRYGUI_SRC   Classes/GSlider.cpp
   Classes/ScrollPane.cpp
   Classes/GRoot.cpp
   Classes/UIPackage.cpp
-  Classes/treeview/TreeNode.cpp
-  Classes/treeview/TreeView.cpp
+  Classes/GTreeNode.cpp
+  Classes/GTree.cpp
   Classes/Window.cpp
   Classes/PackageItem.cpp
   Classes/GObjectPool.cpp
@@ -64,9 +65,11 @@ set(FAIRYGUI_SRC   Classes/GSlider.cpp
   Classes/gears/GearXY.cpp
   Classes/gears/GearColor.cpp
   Classes/gears/GearDisplay.cpp
+  Classes/gears/GearDisplay2.cpp
   Classes/gears/GearSize.cpp
   Classes/gears/GearLook.cpp
   Classes/gears/GearIcon.cpp
+  Classes/gears/GearFontSize.cpp
   Classes/GScrollBar.cpp
   Classes/event/EventContext.cpp
   Classes/event/UIEventDispatcher.cpp
@@ -86,6 +89,7 @@ set(FAIRYGUI_HEADER Classes/GTextField.h
     Classes/GList.h
     Classes/tween/EaseManager.h
     Classes/tween/TweenManager.h
+    Classes/tween/GPath.h
     Classes/tween/GTween.h
     Classes/tween/GTweener.h
     Classes/tween/EaseType.h
@@ -96,8 +100,8 @@ set(FAIRYGUI_HEADER Classes/GTextField.h
     Classes/RelationItem.h
     Classes/GScrollBar.h
     Classes/PopupMenu.h
-    Classes/treeview/TreeNode.h
-    Classes/treeview/TreeView.h
+    Classes/GTreeNode.h
+    Classes/GTree.h
     Classes/TranslationHelper.h
     Classes/UIConfig.h
     Classes/Transition.h
@@ -138,12 +142,14 @@ set(FAIRYGUI_HEADER Classes/GTextField.h
     Classes/gears/GearColor.h
     Classes/gears/GearIcon.h
     Classes/gears/GearDisplay.h
+    Classes/gears/GearDisplay2.h
     Classes/gears/GearText.h
     Classes/gears/GearXY.h
     Classes/gears/GearSize.h
     Classes/gears/GearBase.h
     Classes/gears/GearAnimation.h
     Classes/gears/GearLook.h
+    Classes/gears/GearFontSize.h
     Classes/DragDropManager.h
     Classes/GButton.h
     Classes/event/HitTest.h
