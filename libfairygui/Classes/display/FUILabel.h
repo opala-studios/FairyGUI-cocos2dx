@@ -26,15 +26,16 @@ public:
     void setGrayed(bool value);
 protected:
     /*
-    ×¢Òâ£¡£¡£¡Èç¹ûÕâÀï³öÏÖÁË±àÒë´íÎó£¬ÐèÒªÐÞ¸Äcocos2dµÄÔ´Âë£¬ÎÄ¼þ2d/CCLabel.h£¬´óÔ¼ÔÚ672ÐÐ£¬ÎªupdateBMFontScaleº¯Êý´òÉÏvirtualÐÞÊÎ·û¡£
-    ÒòÎªÕâ¸ö·½·¨ÀïÓÐÇ¿ÖÆ×ÖÌå¶ÔÏóÖ¸ÕëÎªFontFntÀàÐÍµÄ´úÂë£¬µ«ÎÒÃÇ²»Ê¹ÓÃFontFnt£¨FontFntÖ»Ö§³Ö´ÓÍâ²¿ÎÄ¼þÖÐÔØÈëÅäÖÃ£¬¸üÔã¸âµÄÊÇBMFontConfigurationÊÇ¶¨ÒåÔÚcppÀïµÄ¡££©
-    ËùÒÔÐèÒªÖØÐ´Õâ¸ö·½·¨¡£
+    ×¢ï¿½â£¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Þ¸ï¿½cocos2dï¿½ï¿½Ô´ï¿½ë£¬ï¿½Ä¼ï¿½2d/CCLabel.hï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½672ï¿½Ð£ï¿½ÎªupdateBMFontScaleï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½virtualï¿½ï¿½ï¿½Î·ï¿½ï¿½ï¿½
+    ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªFontFntï¿½ï¿½ï¿½ÍµÄ´ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½Ê¹ï¿½ï¿½FontFntï¿½ï¿½FontFntÖ»Ö§ï¿½Ö´ï¿½ï¿½â²¿ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½BMFontConfigurationï¿½Ç¶ï¿½ï¿½ï¿½ï¿½ï¿½cppï¿½ï¿½Ä¡ï¿½ï¿½ï¿½
+    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     */
     virtual void updateBMFontScale() override;
 
 private:
     TextFormat* _textFormat;
     std::string _fontName;
+    std::string _originalFontName;
     int _fontSize;
     bool _bmFontCanTint;
     bool _grayed;

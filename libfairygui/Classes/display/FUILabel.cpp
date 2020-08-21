@@ -2,6 +2,7 @@
 #include "BitmapFont.h"
 #include "UIConfig.h"
 #include "UIPackage.h"
+#include "../opalib/Helpers/OPString.hpp"
 
 NS_FGUI_BEGIN
 USING_NS_CC;
@@ -27,11 +28,35 @@ FUILabel::~FUILabel()
 
 void FUILabel::setText(const std::string& value)
 {
-    if (_fontSize < 0)
+    if (_fontSize < 0) {
         applyTextFormat();
+    }
 
-    if (_fontConfig.fontSize != _fontSize)
+    if (_fontConfig.fontSize != _fontSize) {
         restoreFontSize();
+    }
+
+    bool shouldUseFallbackFont = OPString::hasNonLatinCharacter(value);
+
+    if (_fontName == "System Font" && shouldUseFallbackFont) {
+        _currentLabelType = LabelType::STRING_TEXTURE;
+        _systemFontDirty = true;
+    }
+
+    if (shouldUseFallbackFont && _fontName != "System Font") {
+        _textFormat->face = "System Font";
+        _originalFontName = _fontName;
+        _currentLabelType = LabelType::STRING_TEXTURE;
+        _systemFontDirty = true;
+        applyTextFormat();
+        restoreFontSize();
+    }
+
+    if (!shouldUseFallbackFont && _textFormat->face != _originalFontName && !_originalFontName.empty()) {
+        _textFormat->face = _originalFontName;
+        applyTextFormat();
+        restoreFontSize();
+    }
 
     setString(value);
 }
