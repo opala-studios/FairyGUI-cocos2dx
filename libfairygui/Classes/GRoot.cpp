@@ -481,8 +481,15 @@ void GRoot::playSound(const std::string& url, float volumnScale)
         return;
 
     PackageItem* pi = UIPackage::getItemByURL(url);
-    if (pi)
-        AudioEngine::play2d(pi->file, false, _soundVolumeScale * volumnScale);
+    if (pi) {
+        playSound(pi, _soundVolumeScale * volumnScale);
+    }
+}
+
+void GRoot::playSound(fairygui::PackageItem* item, float volumeScale)
+{
+    auto&& message = std::string("Sound " + item->file + " will not be played. Override GRoot::playSound to implement your own audio engine.").c_str();
+    CCLOGWARN("%s", message);
 }
 
 void GRoot::setSoundEnabled(bool value)
