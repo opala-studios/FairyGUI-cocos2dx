@@ -20,6 +20,7 @@ public:
 
     static GRoot* create(cocos2d::Scene* scene, int zOrder = 1000);
     static GRoot* getInstance() { return _inst; }
+    static void setInstance(GRoot* root) { _inst = root; }
 
     void showWindow(Window* win);
     void hideWindow(Window* win);
