@@ -1639,13 +1639,14 @@ bool GList::handleScroll1(bool forceUpdate)
 
 bool GList::handleScroll2(bool forceUpdate)
 {
-    float pos = _scrollPane->getScrollingPosX();
-    float max = pos + _scrollPane->getViewSize().width;
-    bool end = pos == _scrollPane->getContentSize().width;
-
+    float pos = _scrollPane->getScrollingPosX() - _margin.left;
+    
     int newFirstIndex = getIndexOnPos2(pos, forceUpdate);
     if (newFirstIndex == _firstIndex && !forceUpdate)
         return false;
+    
+    float max = pos + _scrollPane->getViewSize().width + _margin.left + _margin.right;
+    bool end = pos == _scrollPane->getContentSize().width;
 
     int oldFirstIndex = _firstIndex;
     _firstIndex = newFirstIndex;
