@@ -152,6 +152,13 @@
 			remoteGlobalIDString = 445402F81FB3EFFA00869375;
 			remoteInfo = "libfairygui Mac";
 		};
+		49D9318A25D9E24200FC0373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49D9318025D9E24100FC0373 /* opalib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BBCC6E2023FB2AA90084C892;
+			remoteInfo = "opalib-ios";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -216,6 +223,7 @@
 		46880B7A19C43A67006E1F66 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
 		46880B8419C43A87006E1F66 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		46880B8519C43A87006E1F66 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		49D9318025D9E24100FC0373 /* opalib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = opalib.xcodeproj; path = ../../../opalib.xcodeproj; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -366,6 +374,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49D9318025D9E24100FC0373 /* opalib.xcodeproj */,
 				445403DD1FB481C600869375 /* libfairygui iOS.a */,
 				445403DB1FB457AA00869375 /* libfairygui Mac.a */,
 				445403AD1FB419AA00869375 /* libfairygui MAC.a */,
@@ -469,6 +478,14 @@
 			);
 			name = Classes;
 			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		49D9318125D9E24100FC0373 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49D9318B25D9E24200FC0373 /* libopalib-ios.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		503AE0F517EB97AB00D1A890 /* Icons */ = {
@@ -595,6 +612,10 @@
 					ProductGroup = 44905A411FC2D4FE00C33C88 /* Products */;
 					ProjectRef = 445402321FB3E9D000869375 /* fairygui.xcodeproj */;
 				},
+				{
+					ProductGroup = 49D9318125D9E24100FC0373 /* Products */;
+					ProjectRef = 49D9318025D9E24100FC0373 /* opalib.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -638,6 +659,13 @@
 			fileType = archive.ar;
 			path = "libfairygui Mac.a";
 			remoteRef = 44905A481FC2D4FE00C33C88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		49D9318B25D9E24200FC0373 /* libopalib-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libopalib-ios.a";
+			remoteRef = 49D9318A25D9E24200FC0373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
