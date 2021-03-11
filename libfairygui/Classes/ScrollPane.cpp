@@ -1212,15 +1212,17 @@ float ScrollPane::updateTargetAndDuration(float pos, int axis)
         const cocos2d::Size& winSize = Director::getInstance()->getWinSizeInPixels();
         v2 *= 1136.0f / MAX(winSize.width, winSize.height);
 
+        //This value controlls the scroll drag "Weight" 1 is to let the scroll easy as it is in iOS devices
+        float limit = 1; //original was 500
         if (_pageMode)
         {
-            if (v2 > 500)
-                ratio = pow((v2 - 500) / 500, 2);
+            if (v2 > limit)
+                ratio = pow((v2 - limit) / limit, 2);
         }
         else
         {
-            if (v2 > 1000)
-                ratio = pow((v2 - 1000) / 1000, 2);
+            if (v2 > limit*2)
+                ratio = pow((v2 - limit*2) / limit*2, 2);
         }
 #endif
 
