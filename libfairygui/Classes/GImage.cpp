@@ -161,4 +161,20 @@ void GImage::setup_beforeAdd(ByteBuffer* buffer, int beginPos)
     }
 }
 
+cocos2d::Texture2D* GImage::getTexture()
+{
+    if(_content)
+        return _content->getTexture();
+    
+    return nullptr;
+}
+
+cocos2d::SpriteFrame* GImage::getSpriteFrame()
+{
+    if(_content)
+        return _content->getSpriteFrame();
+    
+    return nullptr;
+}
+
 NS_FGUI_END
