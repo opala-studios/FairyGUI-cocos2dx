@@ -35,6 +35,9 @@ public:
 
     float getFillAmount() const;
     void setFillAmount(float value);
+    
+    cocos2d::Texture2D* getTexture();
+    cocos2d::SpriteFrame* getSpriteFrame();
 
     virtual void constructFromResource() override;
 
