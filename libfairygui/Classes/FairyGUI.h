@@ -28,5 +28,7 @@
 #include "DragDropManager.h"
 #include "tween/GTween.h"
 #include "FairyGUIMacros.h"
+#include "TranslationHelper.h"
+
 
 #endif
