@@ -667,10 +667,10 @@ float Transition::getLabelTime(const string& label) const
 {
     for (auto& item : _items)
     {
-        if (item->label == label)
-            return item->time;
-        else if (item->tweenConfig != nullptr && item->label == label)
+        if (item->tweenConfig != nullptr && item->label == label)
             return item->time + item->tweenConfig->duration;
+        else if (item->label == label)
+            return item->time;
     }
 
     return NAN;
