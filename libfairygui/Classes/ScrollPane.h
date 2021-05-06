@@ -86,6 +86,8 @@ public:
     int getPageY() const;
     void setPageY(int value, bool ani = false);
 
+    void setPageSize(cocos2d::Size pageSize);
+
     float getScrollingPosX() const;
     float getScrollingPosY() const;
 

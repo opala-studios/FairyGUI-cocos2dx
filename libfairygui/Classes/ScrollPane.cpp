@@ -468,6 +468,12 @@ void ScrollPane::setPageY(int value, bool ani)
         setPosY(value * _pageSize.height, ani);
 }
 
+void ScrollPane::setPageSize(cocos2d::Size pageSize)
+{
+    _pageSize = pageSize;
+    refresh();
+}
+
 float ScrollPane::getScrollingPosX() const
 {
     return clampf(-_container->getPositionX(), 0, _overlapSize.width);
