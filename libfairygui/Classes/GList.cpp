@@ -1963,6 +1963,9 @@ void GList::handleScroll3(bool forceUpdate)
             xx += ii.size.x + _columnGap;
     }
 
+    if (reuseIndex < 0)
+        reuseIndex = 0;
+
     for (int i = reuseIndex; i < virtualItemCount; i++)
     {
         ItemInfo& ii = _virtualItems[i];
