@@ -1542,4 +1542,8 @@ void Transition::decodeValue(TransitionItem* item, ByteBuffer* buffer, void* val
     }
 }
 
+float Transition::getTotalDuration() const {
+    return _totalDuration;
+}
+
 NS_FGUI_END

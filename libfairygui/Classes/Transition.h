@@ -50,6 +50,8 @@ public:
 
     void setup(ByteBuffer* buffer);
 
+    float getTotalDuration() const;
+
     std::string name;
 
 private:
